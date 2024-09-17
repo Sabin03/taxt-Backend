@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/car-management/model-list/model-list.component.spec.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1722344812507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726389069811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,27 +20,4 @@\n   it('should create', () => {\n     expect(component).toBeTruthy();\n   });\n });\n-\n-\n-/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n-\n-import { ModelListComponent } from './model-list.component';\n-\n-describe('ModelListComponent', () => {\n-  let component: ModelListComponent;\n-  let fixture: ComponentFixture<ModelListComponent>;\n-\n-  beforeEach(() => {\n-    TestBed.configureTestingModule({\n-      declarations: [ModelListComponent]\n-    });\n-    fixture = TestBed.createComponent(ModelListComponent);\n-    component = fixture.componentInstance;\n-    fixture.detectChanges();\n-  });\n-\n-  it('should create', () => {\n-    expect(component).toBeTruthy();\n-  });\n-});*/\n"
+                }
+            ],
+            "date": 1722344812507,
+            "name": "Commit-0",
+            "content": "import { ComponentFixture, TestBed } from '@angular/core/testing';\n\nimport { ModelListComponent } from './model-list.component';\n\ndescribe('ModelListComponent', () => {\n  let component: ModelListComponent;\n  let fixture: ComponentFixture<ModelListComponent>;\n\n  beforeEach(async () => {\n    await TestBed.configureTestingModule({\n      declarations: [ModelListComponent]\n    })\n    .compileComponents();\n    \n    fixture = TestBed.createComponent(ModelListComponent);\n    component = fixture.componentInstance;\n    fixture.detectChanges();\n  });\n\n  it('should create', () => {\n    expect(component).toBeTruthy();\n  });\n});\n\n\n/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n\nimport { ModelListComponent } from './model-list.component';\n\ndescribe('ModelListComponent', () => {\n  let component: ModelListComponent;\n  let fixture: ComponentFixture<ModelListComponent>;\n\n  beforeEach(() => {\n    TestBed.configureTestingModule({\n      declarations: [ModelListComponent]\n    });\n    fixture = TestBed.createComponent(ModelListComponent);\n    component = fixture.componentInstance;\n    fixture.detectChanges();\n  });\n\n  it('should create', () => {\n    expect(component).toBeTruthy();\n  });\n});*/\n"
+        }
+    ]
+}

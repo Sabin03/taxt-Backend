@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/app/auth.guard.spec.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1722094539244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722095175166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import { TestBed } from '@angular/core/testing';\n+import { CanActivateFn } from '@angular/router';\n+\n+import { authGuard } from './auth.guard';\n+\n+describe('authGuard', () => {\n+  const executeGuard: CanActivateFn = (...guardParameters) => \n+      TestBed.runInInjectionContext(() => authGuard(...guardParameters));\n+\n+  beforeEach(() => {\n+    TestBed.configureTestingModule({});\n+  });\n+\n+  it('should be created', () => {\n+    expect(executeGuard).toBeTruthy();\n+  });\n+});\n"
+                },
+                {
+                    "date": 1722095186720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,21 +14,4 @@\n   it('should be created', () => {\n     expect(executeGuard).toBeTruthy();\n   });\n });\n-import { TestBed } from '@angular/core/testing';\n-import { CanActivateFn } from '@angular/router';\n-\n-import { authGuard } from './auth.guard';\n-\n-describe('authGuard', () => {\n-  const executeGuard: CanActivateFn = (...guardParameters) => \n-      TestBed.runInInjectionContext(() => authGuard(...guardParameters));\n-\n-  beforeEach(() => {\n-    TestBed.configureTestingModule({});\n-  });\n-\n-  it('should be created', () => {\n-    expect(executeGuard).toBeTruthy();\n-  });\n-});\n"
+                },
+                {
+                    "date": 1722097827466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +0,0 @@\n-import { TestBed } from '@angular/core/testing';\n-import { CanActivateFn } from '@angular/router';\n-\n-import { authGuard } from './auth.guard';\n-\n-describe('authGuard', () => {\n-  const executeGuard: CanActivateFn = (...guardParameters) => \n-      TestBed.runInInjectionContext(() => authGuard(...guardParameters));\n-\n-  beforeEach(() => {\n-    TestBed.configureTestingModule({});\n-  });\n-\n-  it('should be created', () => {\n-    expect(executeGuard).toBeTruthy();\n-  });\n-});\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722098664340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,17 @@\n+import { TestBed } from '@angular/core/testing';\n+import { CanActivateFn } from '@angular/router';\n \n+import { authGuard } from './auth.guard';\n+\n+describe('authGuard', () => {\n+  const executeGuard: CanActivateFn = (...guardParameters) => \n+      TestBed.runInInjectionContext(() => authGuard(...guardParameters));\n+\n+  beforeEach(() => {\n+    TestBed.configureTestingModule({});\n+  });\n+\n+  it('should be created', () => {\n+    expect(executeGuard).toBeTruthy();\n+  });\n+});\n"
+                }
+            ],
+            "date": 1722094539244,
+            "name": "Commit-0",
+            "content": "import { TestBed } from '@angular/core/testing';\nimport { CanActivateFn } from '@angular/router';\n\nimport { authGuard } from './auth.guard';\n\ndescribe('authGuard', () => {\n  const executeGuard: CanActivateFn = (...guardParameters) => \n      TestBed.runInInjectionContext(() => authGuard(...guardParameters));\n\n  beforeEach(() => {\n    TestBed.configureTestingModule({});\n  });\n\n  it('should be created', () => {\n    expect(executeGuard).toBeTruthy();\n  });\n});\n"
+        }
+    ]
+}

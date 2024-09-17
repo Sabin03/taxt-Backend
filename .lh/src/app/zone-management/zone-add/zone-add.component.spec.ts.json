@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/zone-management/zone-add/zone-add.component.spec.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1722116238620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722128948470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { ComponentFixture, TestBed } from '@angular/core/testing';\n+/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n \n import { ZoneAddComponent } from './zone-add.component';\n \n describe('ZoneAddComponent', () => {\n@@ -19,15 +19,15 @@\n \n   it('should create', () => {\n     expect(component).toBeTruthy();\n   });\n-});\n+});*/\n \n \n \n-/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n+import { ComponentFixture, TestBed } from '@angular/core/testing';\n \n-import { ZoneAddComponent } from './ZoneAddComponent';\n+import { ZoneAddComponent } from './zone-add.component';\n \n describe('ZoneAddComponent', () => {\n   let component: ZoneAddComponent;\n   let fixture: ComponentFixture<ZoneAddComponent>;\n@@ -45,5 +45,4 @@\n     expect(component).toBeTruthy();\n   });\n });\n \n-*/\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722129005321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n+import { ComponentFixture, TestBed } from '@angular/core/testing';\n \n import { ZoneAddComponent } from './zone-add.component';\n \n describe('ZoneAddComponent', () => {\n@@ -19,15 +19,15 @@\n \n   it('should create', () => {\n     expect(component).toBeTruthy();\n   });\n-});*/\n+});\n \n \n \n-import { ComponentFixture, TestBed } from '@angular/core/testing';\n+/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n \n-import { ZoneAddComponent } from './zone-add.component';\n+import { ZoneAddComponent } from './ZoneAddComponent';\n \n describe('ZoneAddComponent', () => {\n   let component: ZoneAddComponent;\n   let fixture: ComponentFixture<ZoneAddComponent>;\n@@ -45,4 +45,5 @@\n     expect(component).toBeTruthy();\n   });\n });\n \n+*/\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722129371225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { ComponentFixture, TestBed } from '@angular/core/testing';\n+/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n \n import { ZoneAddComponent } from './zone-add.component';\n \n describe('ZoneAddComponent', () => {\n@@ -19,15 +19,15 @@\n \n   it('should create', () => {\n     expect(component).toBeTruthy();\n   });\n-});\n+});*/\n \n \n \n-/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n+import { ComponentFixture, TestBed } from '@angular/core/testing';\n \n-import { ZoneAddComponent } from './ZoneAddComponent';\n+import { ZoneAddComponent } from './zone-add.component';\n \n describe('ZoneAddComponent', () => {\n   let component: ZoneAddComponent;\n   let fixture: ComponentFixture<ZoneAddComponent>;\n@@ -45,5 +45,4 @@\n     expect(component).toBeTruthy();\n   });\n });\n \n-*/\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722149377833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n+import { ComponentFixture, TestBed } from '@angular/core/testing';\n \n import { ZoneAddComponent } from './zone-add.component';\n \n describe('ZoneAddComponent', () => {\n@@ -19,13 +19,13 @@\n \n   it('should create', () => {\n     expect(component).toBeTruthy();\n   });\n-});*/\n+});\n \n \n \n-import { ComponentFixture, TestBed } from '@angular/core/testing';\n+/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n \n import { ZoneAddComponent } from './zone-add.component';\n \n describe('ZoneAddComponent', () => {\n@@ -43,6 +43,6 @@\n \n   it('should create', () => {\n     expect(component).toBeTruthy();\n   });\n-});\n+});*/\n \n"
+                },
+                {
+                    "date": 1726388713209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,28 +21,4 @@\n     expect(component).toBeTruthy();\n   });\n });\n \n-\n-\n-/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n-\n-import { ZoneAddComponent } from './zone-add.component';\n-\n-describe('ZoneAddComponent', () => {\n-  let component: ZoneAddComponent;\n-  let fixture: ComponentFixture<ZoneAddComponent>;\n-\n-  beforeEach(() => {\n-    TestBed.configureTestingModule({\n-      declarations: [ZoneAddComponent]\n-    });\n-    fixture = TestBed.createComponent(ZoneAddComponent);\n-    component = fixture.componentInstance;\n-    fixture.detectChanges();\n-  });\n-\n-  it('should create', () => {\n-    expect(component).toBeTruthy();\n-  });\n-});*/\n-\n"
+                }
+            ],
+            "date": 1722116238620,
+            "name": "Commit-0",
+            "content": "import { ComponentFixture, TestBed } from '@angular/core/testing';\n\nimport { ZoneAddComponent } from './zone-add.component';\n\ndescribe('ZoneAddComponent', () => {\n  let component: ZoneAddComponent;\n  let fixture: ComponentFixture<ZoneAddComponent>;\n\n  beforeEach(async () => {\n    await TestBed.configureTestingModule({\n      declarations: [ZoneAddComponent]\n    })\n    .compileComponents();\n    \n    fixture = TestBed.createComponent(ZoneAddComponent);\n    component = fixture.componentInstance;\n    fixture.detectChanges();\n  });\n\n  it('should create', () => {\n    expect(component).toBeTruthy();\n  });\n});\n\n\n\n/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n\nimport { ZoneAddComponent } from './ZoneAddComponent';\n\ndescribe('ZoneAddComponent', () => {\n  let component: ZoneAddComponent;\n  let fixture: ComponentFixture<ZoneAddComponent>;\n\n  beforeEach(() => {\n    TestBed.configureTestingModule({\n      declarations: [ZoneAddComponent]\n    });\n    fixture = TestBed.createComponent(ZoneAddComponent);\n    component = fixture.componentInstance;\n    fixture.detectChanges();\n  });\n\n  it('should create', () => {\n    expect(component).toBeTruthy();\n  });\n});\n\n*/"
+        }
+    ]
+}

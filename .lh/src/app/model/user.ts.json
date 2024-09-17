@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/model/user.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722100310498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722100310498,
+            "name": "Commit-0",
+            "content": "export class User {\n\n    constructor(\n        public user_id: number = 0,\n        public name: string = \"\",\n        public email: string = \"\",\n        public gender: string = \"\",\n        public mobile: string = \"\",\n        public mobile_code: string = \"\",\n        public user_type: number = 1,\n        public device_source: string = \"\",\n        public zone_id: number = 0,\n        public image: string = \"\",\n        public is_block: number = 0,\n        public is_online: number = 0,\n        public status: number = 0,\n        public created_date: string = \"\",\n        public zone_name: string = \"\"\n\n    ) {\n\n    }\n}\n"
+        }
+    ]
+}

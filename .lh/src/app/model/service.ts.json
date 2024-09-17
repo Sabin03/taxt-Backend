@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/model/service.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1721732421199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1721732421199,
+            "name": "Commit-0",
+            "content": "export class Service {\n\n    constructor(\n        public service_id: number = 0,\n        public service_name: string = \"\",\n        public seat: number = 1,\n        public color: string = \"#000000\",\n        public icon: string = \"\",\n        public top_icon: string = \"\",\n        public gender: string = \"\",\n        public status: number = 1,\n        public created_date: string = \"\",\n        public description: string = \"\",\n        public isSelect: boolean = false,\n    ) {\n\n    }\n}\n"
+        }
+    ]
+}

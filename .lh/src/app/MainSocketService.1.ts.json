@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/MainSocketService.1.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1721127483302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1721127893887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,35 +1,5 @@\n-import { Injectable } from '@angular/core';\n-import { io } from 'socket.io-client';\n \n \n \n \n-@Injectable({\n-  providedIn: 'root'\n-})\n-export class MainSocketService {\n \n-  public socket = io(\"https://localhost:4000\");\n-  public sid = '';\n-\n-  constructor() {\n-\n-    this.socket.on('connect', () => {\n-      this.sid = this.socket.id;\n-\n-    });\n-\n-    this.socket.on('disconnect', () => {\n-      console.log(\"Disconnect\");\n-    });\n-  }\n-\n-\n-  emit(service: any, data: any) {\n-    this.socket.emit(service, data);\n-  }\n-\n-  on(service: any, data: Function) {\n-    this.socket.on(service, data);\n-  }\n-}\n"
+                }
+            ],
+            "date": 1721127483302,
+            "name": "Commit-0",
+            "content": "import { Injectable } from '@angular/core';\nimport { io } from 'socket.io-client';\n\n\n\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class MainSocketService {\n\n  public socket = io(\"https://localhost:4000\");\n  public sid = '';\n\n  constructor() {\n\n    this.socket.on('connect', () => {\n      this.sid = this.socket.id;\n\n    });\n\n    this.socket.on('disconnect', () => {\n      console.log(\"Disconnect\");\n    });\n  }\n\n\n  emit(service: any, data: any) {\n    this.socket.emit(service, data);\n  }\n\n  on(service: any, data: Function) {\n    this.socket.on(service, data);\n  }\n}\n"
+        }
+    ]
+}

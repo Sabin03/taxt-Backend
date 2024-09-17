@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/dashboard-page/dashboard-page.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1721562807856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1721562807856,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-dashboard-page',\n  templateUrl: './dashboard-page.component.html',\n  styleUrl: './dashboard-page.component.css'\n})\nexport class DashboardPageComponent {\n\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/model/zone-list.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722150125684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722150125684,
+            "name": "Commit-0",
+            "content": "export class ZoneList {\n\n    constructor(\n        public zone_id: number = 0,\n        public zone_doc_id: number = 0,\n        public price_id: number = 0,\n        public service_id: number = 0,\n        public on_service_id: string = '',\n\n        public zone_name: string = '',\n        public zone_json: string = '',\n        public city: string = '',\n        public tax: string = '',\n        public service_name: string = '',\n\n        public document_name: string = '',\n        public car_document_name: string = '',\n        public base_charge: string = '',\n        public per_km_charge: string = '',\n        public per_min_charge: string = '',\n        public booking_charge: string = '',\n        public mini_fair: string = '',\n        public mini_km: string = '',\n        public cancel_change: string = ''\n\n    ){\n\n    }\n}\n"
+        }
+    ]
+}

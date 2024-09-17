@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/data-management/document-list/edit-document/edit-document.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1721655667909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1721655667909,
+            "name": "Commit-0",
+            "content": "import { Component, Inject, OnInit } from '@angular/core';\nimport { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { Common } from '../../../common';\nimport { WebService } from '../../../web.service';\nimport { Document } from '../../../model/document';\n\n\n\n@Component({\n  selector: 'app-edit-document',\n  templateUrl: './edit-document.component.html',\n  styleUrls: ['./edit-document.component.css']\n})\nexport class EditDocumentComponent implements OnInit {\n\n  editObj: Document = new Document();\n  documentList = [\n    {\n      \"name\": \"Personal\",\n      \"value\": 1\n    },\n    {\n      \"name\": \"Cars\",\n      \"value\": 2\n    },\n  ]\n\n  constructor(\n    public dialogRef: MatDialogRef<EditDocumentComponent>,\n    @Inject(MAT_DIALOG_DATA) public data: any,\n    private webService: WebService,\n    public snackBar: MatSnackBar,\n  ) {\n\n    this.editObj = Object.assign({}, data);\n\n  }\n  onNoClick(): void {\n    this.dialogRef.close();\n  }\n\n  ngOnInit() { }\n\n\n  openSnackBar(message: string) {\n\n    Common.Dlog(message);\n    this.snackBar.open(message, 'Ok', {\n      duration: 5000,\n    });\n  }\n\n  updateData() {\n    if (this.editObj.name == \"\") {\n      this.openSnackBar(\"Please enter document name\");\n      return\n    }\n\n    this.webService.action(Common.svEditDocument, { \"doc_id\": this.editObj.doc_id, \"document_name\": this.editObj.name, \"document_type\": this.editObj.type.toString() }, true).then((responseObj: any) => {\n      if (responseObj.status == 1) {\n        \n        this.openSnackBar(responseObj.message);\n        this.dialogRef.close(this.editObj);\n\n      } else {\n        this.openSnackBar(responseObj.message);\n      }\n    })\n  }\n}\n"
+        }
+    ]
+}

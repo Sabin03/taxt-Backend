@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/car-management/series-list/series-list.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722334200000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722334200000,
+            "name": "Commit-0",
+            "content": "\n<div fxLayout=\"column\" fxLayoutAlign=\"center stretch\" style=\"margin: 10px;\">\n    <h3>Car Series List</h3>\n\n    <div class=\"mat-elevation-z8\">\n        <div fxLayout=\"row\" fxLayoutAlign=\"end stretch\" fxLayoutGap=\"15px\">\n            <mat-form-field>\n                <input matInput #txtVal (keyup)=\"applyFilter(txtVal.value)\" placeholder=\"Search here\">\n            </mat-form-field>\n        </div>\n\n        <table mat-table [dataSource]=\"dataSource\" width=\"100%\" matSort>\n            <ng-container matColumnDef=\"no\">\n                <th mat-header-cell *matHeaderCellDef> No. </th>\n                <td mat-cell *matCellDef=\"let element; let i = index\"> {{i + 1}} </td>\n            </ng-container>\n\n            <ng-container matColumnDef=\"brand_name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Brand Name </th>\n                <td mat-cell *matCellDef=\"let element\"> {{element.brand_name}} </td>\n            </ng-container>\n\n            <ng-container matColumnDef=\"model_name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Model Name </th>\n                <td mat-cell *matCellDef=\"let element\"> {{element.model_name}} </td>\n            </ng-container>\n\n            <ng-container matColumnDef=\"name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Series Name </th>\n                <td mat-cell *matCellDef=\"let element\"> {{element.series_name}} </td>\n            </ng-container>\n\n            <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>\n                <td mat-cell *matCellDef=\"let element\">\n\n                    <mat-slide-toggle color=\"primary\" [checked]=\"element.status == 1\" (change)=\"toggle(element ,$event)\">\n                        {{getStatusName(element)}} </mat-slide-toggle>\n\n                </td>\n            </ng-container>\n\n            <ng-container matColumnDef=\"created_date\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date </th>\n                <td mat-cell *matCellDef=\"let element\"> {{element.created_date}} </td>\n            </ng-container>\n\n            <ng-container matColumnDef=\"modify_date\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Modify Date </th>\n                <td mat-cell *matCellDef=\"let element\"> {{element.modify_date}} </td>\n            </ng-container>\n\n            <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let element\" fxLayoutGap=\"10px\">\n\n                    <button mat-mini-fab color=\"warn\" (click)=\"deleteData(element)\"><mat-icon>delete</mat-icon></button>\n                </td>\n            </ng-container>\n\n            <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n            <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n        </table>\n\n        <mat-paginator [pageSizeOptions]=\"[20,50,100]\"></mat-paginator>\n\n    </div>\n\n</div>"
+        }
+    ]
+}

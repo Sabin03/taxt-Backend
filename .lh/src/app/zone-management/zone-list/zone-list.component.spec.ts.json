@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/zone-management/zone-list/zone-list.component.spec.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1722151199369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726388723645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,28 +21,4 @@\n     expect(component).toBeTruthy();\n   });\n });\n \n-\n-\n-/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n-\n-import { ZoneListComponent } from './zone-list.component';\n-\n-describe('ZoneListComponent', () => {\n-  let component: ZoneListComponent;\n-  let fixture: ComponentFixture<ZoneListComponent>;\n-\n-  beforeEach(() => {\n-    TestBed.configureTestingModule({\n-      declarations: [ZoneListComponent]\n-    });\n-    fixture = TestBed.createComponent(ZoneListComponent);\n-    component = fixture.componentInstance;\n-    fixture.detectChanges();\n-  });\n-\n-  it('should create', () => {\n-    expect(component).toBeTruthy();\n-  });\n-});\n-*/\n"
+                }
+            ],
+            "date": 1722151199369,
+            "name": "Commit-0",
+            "content": "import { ComponentFixture, TestBed } from '@angular/core/testing';\n\nimport { ZoneListComponent } from './zone-list.component';\n\ndescribe('ZoneListComponent', () => {\n  let component: ZoneListComponent;\n  let fixture: ComponentFixture<ZoneListComponent>;\n\n  beforeEach(async () => {\n    await TestBed.configureTestingModule({\n      declarations: [ZoneListComponent]\n    })\n    .compileComponents();\n    \n    fixture = TestBed.createComponent(ZoneListComponent);\n    component = fixture.componentInstance;\n    fixture.detectChanges();\n  });\n\n  it('should create', () => {\n    expect(component).toBeTruthy();\n  });\n});\n\n\n\n/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n\nimport { ZoneListComponent } from './zone-list.component';\n\ndescribe('ZoneListComponent', () => {\n  let component: ZoneListComponent;\n  let fixture: ComponentFixture<ZoneListComponent>;\n\n  beforeEach(() => {\n    TestBed.configureTestingModule({\n      declarations: [ZoneListComponent]\n    });\n    fixture = TestBed.createComponent(ZoneListComponent);\n    component = fixture.componentInstance;\n    fixture.detectChanges();\n  });\n\n  it('should create', () => {\n    expect(component).toBeTruthy();\n  });\n});\n*/\n"
+        }
+    ]
+}

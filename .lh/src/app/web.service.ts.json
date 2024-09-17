@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/web.service.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1721123339293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1721125462142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,15 @@\n       return this.http.post(serviceName, parameter).toPromise();\n     }\n   }\n \n+  actionObservable(serviceName: string, parameter: any, isToken = false) {\n+    if (isToken) {\n+      return this.http.post(serviceName, parameter, {\n+        headers: new HttpHeaders({ access_token: \"\", }),\n+        reportProgress: true, observe:\"events\"\n+      });\n+    } else {\n+      return this.http.post(serviceName, parameter, { reportProgress: true, observe: \"events\" } );\n+    }\n+  }\n }\n"
+                },
+                {
+                    "date": 1721635600380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { HttpClient, HttpHeaders } from '@angular/common/http';\n import { Injectable } from '@angular/core';\n+import { Common } from './common';\n \n @Injectable({\n   providedIn: 'root'\n })\n@@ -10,9 +11,9 @@\n \n   action(serviceName: string, parameter: any, isToken = false) {\n     if (isToken) {\n       return this.http.post(serviceName, parameter, {\n-        headers: new HttpHeaders({ access_token:  \"\", })\n+        headers: new HttpHeaders({ access_token: Common.accessToken ?? \"\", })\n       }).toPromise();\n     } else {\n       return this.http.post(serviceName, parameter).toPromise();\n     }\n@@ -20,9 +21,9 @@\n \n   actionObservable(serviceName: string, parameter: any, isToken = false) {\n     if (isToken) {\n       return this.http.post(serviceName, parameter, {\n-        headers: new HttpHeaders({ access_token: \"\", }),\n+        headers: new HttpHeaders({ access_token: Common.accessToken ?? \"\", }),\n         reportProgress: true, observe:\"events\"\n       });\n     } else {\n       return this.http.post(serviceName, parameter, { reportProgress: true, observe: \"events\" } );\n"
+                },
+                {
+                    "date": 1721644491501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n @Injectable({\n   providedIn: 'root'\n })\n export class WebService {\n+  getDocumentList() {\n+    throw new Error('Method not implemented.');\n+  }\n \n   constructor( private http: HttpClient ) { }\n \n   action(serviceName: string, parameter: any, isToken = false) {\n"
+                },
+                {
+                    "date": 1722084931683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import { HttpClient, HttpHeaders } from '@angular/common/http';\n+import { Injectable } from '@angular/core';\n+import { Common } from './common';\n+\n+@Injectable({\n+  providedIn: 'root'\n+})\n+export class WebService {\n+\n+  constructor(private http: HttpClient) { }\n+\n+  action(serviceName: string, parameter: any, isToken = false) {\n+    if (isToken) {\n+      return this.http.post(serviceName, parameter, {\n+        headers: new HttpHeaders({ access_token: (Common.accessToken ?? \"\" ).toString()})\n+      }).toPromise();\n+    } else {\n+      return this.http.post(serviceName, parameter).toPromise();\n+    }\n+  }\n+\n+  actionObservable(serviceName: string, parameter: any, isToken = false) {\n+    if (isToken) {\n+      return this.http.post(serviceName, parameter, {\n+        headers: new HttpHeaders({ access_token: (Common.accessToken ?? \"\" ).toString()}),\n+        reportProgress: true, observe:\"events\"\n+      });\n+    } else {\n+      return this.http.post(serviceName, parameter, { reportProgress: true, observe: \"events\" } );\n+    }\n+  }\n+}\n"
+                },
+                {
+                    "date": 1722085627199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,40 +5,8 @@\n @Injectable({\n   providedIn: 'root'\n })\n export class WebService {\n-\n-  constructor(private http: HttpClient) { }\n-\n-  action(serviceName: string, parameter: any, isToken = false) {\n-    if (isToken) {\n-      return this.http.post(serviceName, parameter, {\n-        headers: new HttpHeaders({ access_token: (Common.accessToken ?? \"\" ).toString()})\n-      }).toPromise();\n-    } else {\n-      return this.http.post(serviceName, parameter).toPromise();\n-    }\n-  }\n-\n-  actionObservable(serviceName: string, parameter: any, isToken = false) {\n-    if (isToken) {\n-      return this.http.post(serviceName, parameter, {\n-        headers: new HttpHeaders({ access_token: (Common.accessToken ?? \"\" ).toString()}),\n-        reportProgress: true, observe:\"events\"\n-      });\n-    } else {\n-      return this.http.post(serviceName, parameter, { reportProgress: true, observe: \"events\" } );\n-    }\n-  }\n-}\n-import { HttpClient, HttpHeaders } from '@angular/common/http';\n-import { Injectable } from '@angular/core';\n-import { Common } from './common';\n-\n-@Injectable({\n-  providedIn: 'root'\n-})\n-export class WebService {\n   getDocumentList() {\n     throw new Error('Method not implemented.');\n   }\n \n"
+                }
+            ],
+            "date": 1721123339293,
+            "name": "Commit-0",
+            "content": "import { HttpClient, HttpHeaders } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class WebService {\n\n  constructor( private http: HttpClient ) { }\n\n  action(serviceName: string, parameter: any, isToken = false) {\n    if (isToken) {\n      return this.http.post(serviceName, parameter, {\n        headers: new HttpHeaders({ access_token:  \"\", })\n      }).toPromise();\n    } else {\n      return this.http.post(serviceName, parameter).toPromise();\n    }\n  }\n\n}\n"
+        }
+    ]
+}

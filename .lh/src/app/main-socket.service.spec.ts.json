@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/main-socket.service.spec.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1721127394039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1721127483310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { TestBed } from '@angular/core/testing';\n \n-import { MainSocketService } from './MainSocketService';\n+import { MainSocketService } from './MainSocketService.1';\n \n describe('MainSocketService', () => {\n   let service: MainSocketService;\n \n"
+                },
+                {
+                    "date": 1721127872080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,3 @@\n-import { TestBed } from '@angular/core/testing';\n \n-import { MainSocketService } from './MainSocketService.1';\n \n-describe('MainSocketService', () => {\n-  let service: MainSocketService;\n \n-  beforeEach(() => {\n-    TestBed.configureTestingModule({});\n-    service = TestBed.inject(MainSocketService);\n-  });\n-\n-  it('should be created', () => {\n-    expect(service).toBeTruthy();\n-  });\n-});\n"
+                },
+                {
+                    "date": 1721127893908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,16 @@\n+import { TestBed } from '@angular/core/testing';\n \n+import { MainSocketService } from './MainSocketService.2';\n \n+describe('MainSocketService', () => {\n+  let service: MainSocketService;\n \n+  beforeEach(() => {\n+    TestBed.configureTestingModule({});\n+    service = TestBed.inject(MainSocketService);\n+  });\n+\n+  it('should be created', () => {\n+    expect(service).toBeTruthy();\n+  });\n+});\n"
+                },
+                {
+                    "date": 1721500098902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { TestBed } from '@angular/core/testing';\n \n-import { MainSocketService } from './MainSocketService.2';\n+import { MainSocketService } from './common';\n \n describe('MainSocketService', () => {\n   let service: MainSocketService;\n \n"
+                },
+                {
+                    "date": 1721500235528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { TestBed } from '@angular/core/testing';\n \n-import { MainSocketService } from './common';\n+import { MainSocketService } from './main-socket.service';\n \n describe('MainSocketService', () => {\n   let service: MainSocketService;\n \n"
+                }
+            ],
+            "date": 1721127394039,
+            "name": "Commit-0",
+            "content": "import { TestBed } from '@angular/core/testing';\n\nimport { MainSocketService } from './MainSocketService';\n\ndescribe('MainSocketService', () => {\n  let service: MainSocketService;\n\n  beforeEach(() => {\n    TestBed.configureTestingModule({});\n    service = TestBed.inject(MainSocketService);\n  });\n\n  it('should be created', () => {\n    expect(service).toBeTruthy();\n  });\n});\n"
+        }
+    ]
+}

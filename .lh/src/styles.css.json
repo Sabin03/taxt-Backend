@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/styles.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1721119695407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722107779149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,17 @@\n body { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; }\n \n table{\n     width: 100%;\n+}\n+\n+.data-container {\n+    padding: 30px;\n+    margin: 12px;\n+}\n+\n+.table-container {\n+    width: 99%;\n+    max-width: 99%;\n+    overflow: auto;\n+    margin: 12px;\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1721119695407,
+            "name": "Commit-0",
+            "content": "/* You can add global styles to this file, and also import other style files */\n\nhtml, body { height: 100%; }\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; }\n\ntable{\n    width: 100%;\n}"
+        }
+    ]
+}

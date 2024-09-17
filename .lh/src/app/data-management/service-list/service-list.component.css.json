@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/data-management/service-list/service-list.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1721731358583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1721731358582,
+            "name": "Commit-0",
+            "content": "img {\n    width: 70px;\n    height: 70px;\n    object-fit: contain;\n    align-content: center;\n    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),\n        0 1px 10px 0 rgba(0, 0, 0, 0.12),\n        0 2px 4px -1px rgba(0, 0, 0, 0.3);\n    margin: 8px 0px;\n}"
+        }
+    ]
+}

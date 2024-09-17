@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/model/zone-document.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722260148141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722260148141,
+            "name": "Commit-0",
+            "content": "export class ZoneDocument {\n\n    constructor(\n        public zone_doc_id: number = 0,\n        public service_id: number = 0,\n        public zone_id: number = 0,\n\n        public zone_name: string = '',\n        public document_name: string = '',\n        public car_document_name: string = '',\n\n        public document_ids: string = '',\n        public car_document_ids: string = '',\n        \n\n        public isSelect: boolean = false,\n    ) {\n\n    }\n}\n"
+        }
+    ]
+}

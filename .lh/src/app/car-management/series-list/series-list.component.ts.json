@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/car-management/series-list/series-list.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722334193531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722334193531,
+            "name": "Commit-0",
+            "content": "import { Component, ViewChild } from '@angular/core';\nimport { MatPaginator } from '@angular/material/paginator';\nimport { MatSort } from '@angular/material/sort';\nimport { Series } from '../../model/series';\nimport { MatTableDataSource } from '@angular/material/table';\nimport { WebService } from '../../web.service';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { Common } from '../../common';\n\n@Component({\n  selector: 'app-series-list',\n  templateUrl: './series-list.component.html',\n  styleUrl: './series-list.component.css'\n})\nexport class SeriesListComponent {\n\n  @ViewChild(MatPaginator) paginator!: MatPaginator;\n  @ViewChild(MatSort) sort!: MatSort;\n\n  displayedColumns: string[] = ['no', 'brand_name', 'model_name', 'name', 'status', 'created_date', 'modify_date', 'action']\n  listArray: Array<Series> = [];\n  dataSource: MatTableDataSource<Series> = new MatTableDataSource<Series>();\n\n\n  constructor(private webService: WebService, public snackBar: MatSnackBar) {\n\n  }\n\n  ngOnInit(): void {\n    this.getList();\n  }\n\n  ngAfterViewInit(): void {\n    this.dataSource.paginator = this.paginator;\n    this.dataSource.sort = this.sort;\n  }\n\n  applyFilter(filterValue: string) {\n    this.dataSource.filter = filterValue.trim().toLowerCase();\n    if (this.dataSource.paginator) {\n      this.dataSource.paginator.firstPage();\n    }\n  }\n\n  openSnackBar(message: string) {\n    this.snackBar.open(message, \"ok\", {\n      duration: 2000,\n    });\n  }\n\n  toggle(mObj: Series, obj: any) {\n\n    this.webService.action(Common.svApprovedSeries, {\n\n      \"series_id\": mObj.series_id,\n    }, true).then((responseObj: any) => {\n\n      mObj.status = mObj.status == 1 ? 0 : 1;\n      this.openSnackBar(responseObj.message);\n      this.dataSource = new MatTableDataSource(this.listArray);\n      this.dataSource.paginator = this.paginator;\n      this.dataSource.sort = this.sort;\n\n    })\n  }\n\n  getStatusName(obj: Series) {\n    switch (obj.status) {\n      case 1:\n        return \"Approved\"\n      default:\n        return \"Pending\"\n    }\n  }\n\n\n  getList() {\n\n    this.webService.action(Common.svListCarSeries, {}, true).then((responseObj: any) => {\n\n      Common.Dlog(responseObj);\n      if (responseObj.status == 1) {\n        this.listArray = responseObj.payload;\n\n\n      } else {\n        this.listArray = [];\n        this.openSnackBar(responseObj.message);\n      }\n\n      this.dataSource = new MatTableDataSource(this.listArray);\n      this.dataSource.paginator = this.paginator;\n      this.dataSource.sort = this.sort;\n\n    })\n  }\n\n  deleteData(obj: Series) {\n    this.webService.action(Common.svDeleteSeries, { \"series_id\": obj.series_id }, true).then((responseObj: any) => {\n      if (responseObj.status == 1) {\n        this.listArray = this.listArray.filter(item => item.series_id != obj.series_id);\n        this.dataSource = new MatTableDataSource(this.listArray);\n        this.dataSource.paginator = this.paginator;\n        this.dataSource.sort = this.sort;\n        this.openSnackBar(\"series deleted successfully\");\n      } else {\n        this.openSnackBar(responseObj.message);\n      }\n    })\n  }\n} \n"
+        }
+    ]
+}

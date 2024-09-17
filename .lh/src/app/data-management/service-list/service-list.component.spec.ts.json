@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/data-management/service-list/service-list.component.spec.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1721731453285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726388975017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,28 +1,6 @@\n-/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n \n-import { ServiceListComponent } from './service-list.component';\n \n-describe('ServiceListComponent', () => {\n-  let component: ServiceListComponent;\n-  let fixture: ComponentFixture<ServiceListComponent>;\n-\n-  beforeEach(async () => {\n-    await TestBed.configureTestingModule({\n-      declarations: [ServiceListComponent]\n-    })\n-    .compileComponents();\n-    \n-    fixture = TestBed.createComponent(ServiceListComponent);\n-    component = fixture.componentInstance;\n-    fixture.detectChanges();\n-  });\n-\n-  it('should create', () => {\n-    expect(component).toBeTruthy();\n-  });\n-});*/\n-\n import { ComponentFixture, TestBed } from '@angular/core/testing';\n \n import { ServiceListComponent } from './service-list.component';\n \n"
+                }
+            ],
+            "date": 1721731453285,
+            "name": "Commit-0",
+            "content": "/*import { ComponentFixture, TestBed } from '@angular/core/testing';\n\nimport { ServiceListComponent } from './service-list.component';\n\ndescribe('ServiceListComponent', () => {\n  let component: ServiceListComponent;\n  let fixture: ComponentFixture<ServiceListComponent>;\n\n  beforeEach(async () => {\n    await TestBed.configureTestingModule({\n      declarations: [ServiceListComponent]\n    })\n    .compileComponents();\n    \n    fixture = TestBed.createComponent(ServiceListComponent);\n    component = fixture.componentInstance;\n    fixture.detectChanges();\n  });\n\n  it('should create', () => {\n    expect(component).toBeTruthy();\n  });\n});*/\n\nimport { ComponentFixture, TestBed } from '@angular/core/testing';\n\nimport { ServiceListComponent } from './service-list.component';\n\ndescribe('ServiceListComponent', () => {\n  let component: ServiceListComponent;\n  let fixture: ComponentFixture<ServiceListComponent>;\n\n  beforeEach(() => {\n    TestBed.configureTestingModule({\n      declarations: [ServiceListComponent]\n    });\n    fixture = TestBed.createComponent(ServiceListComponent);\n    component = fixture.componentInstance;\n    fixture.detectChanges();\n  });\n\n  it('should create', () => {\n    expect(component).toBeTruthy();\n  });\n});\n\n"
+        }
+    ]
+}

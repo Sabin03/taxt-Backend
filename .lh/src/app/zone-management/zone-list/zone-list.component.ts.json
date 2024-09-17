@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/zone-management/zone-list/zone-list.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722150618026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722150618026,
+            "name": "Commit-0",
+            "content": "import { Component, ViewChild } from '@angular/core';\nimport { MatPaginator } from '@angular/material/paginator';\nimport { MatSort } from '@angular/material/sort';\nimport { ZoneList } from '../../model/zone-list';\nimport { MatTableDataSource } from '@angular/material/table';\nimport { WebService } from '../../web.service';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { MatDialog } from '@angular/material/dialog';\nimport { Common } from '../../common';\n\n@Component({\n  selector: 'app-zone-list',\n  templateUrl: './zone-list.component.html',\n  styleUrl: './zone-list.component.css'\n})\n\n\nexport class ZoneListComponent {\n  @ViewChild(MatPaginator) paginator!: MatPaginator;\n  @ViewChild(MatSort) sort!: MatSort;\n\n  displayedColumns: string[] = ['no', 'name', 'city', 'tax', 'action']\n  listArray: Array<ZoneList> = [];\n  dataSource: MatTableDataSource<ZoneList> = new MatTableDataSource<ZoneList>();\n\n\n  constructor(private webService: WebService, public snackBar: MatSnackBar, public dialog: MatDialog) {\n\n  }\n\n  ngOnInit(): void {\n    this.getList();\n  }\n\n  ngAfterViewInit(): void {\n    this.dataSource.paginator = this.paginator;\n    this.dataSource.sort = this.sort;\n  }\n\n\n  applyFilter(filterValue: string) {\n    this.dataSource.filter = filterValue.trim().toLowerCase();\n    if (this.dataSource.paginator) {\n      this.dataSource.paginator.firstPage();\n    }\n  }\n\n  openSnackBar(message: string) {\n    this.snackBar.open(message, \"ok\", {\n      duration: 2000,\n    });\n  }\n\n  deleteData(obj: ZoneList) {\n    // this.webService.action(Common.svDeleteService, { \"service_id\": obj.service_id }, true).then((responseObj: any) => {\n    //   if (responseObj.status == 1) {\n    //     this.listArray = this.listArray.filter(item => item.service_id != obj.service_id);\n    //     this.dataSource = new MatTableDataSource(this.listArray);\n    //     this.dataSource.paginator = this.paginator;\n    //     this.dataSource.sort = this.sort;\n    //     this.openSnackBar(\"service deleted successfully\");\n    //   } else {\n    //     this.openSnackBar(responseObj.message);\n    //   }\n    // })\n  }\n\n\n\n  getList() {\n\n    this.webService.action(Common.svListZone, {}, true).then((responseObj: any) => {\n\n      Common.Dlog(responseObj);\n      if (responseObj.status == 1) {\n        this.listArray = responseObj.payload;\n\n\n      } else {\n        this.listArray = [];\n        this.openSnackBar(responseObj.message);\n      }\n\n      this.dataSource = new MatTableDataSource(this.listArray);\n      this.dataSource.paginator = this.paginator;\n      this.dataSource.sort = this.sort;\n\n    })\n  }\n}"
+        }
+    ]
+}

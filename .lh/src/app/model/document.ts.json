@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/model/document.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1721570011488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1721570011488,
+            "name": "Commit-0",
+            "content": "export class Document {\n\n    constructor(\n        public doc_id: number = 0,\n        public name: string = \"\",\n        public type: number = 1,\n        public isSelect: boolean = false,\n    ){\n        \n    }\n}\n"
+        }
+    ]
+}

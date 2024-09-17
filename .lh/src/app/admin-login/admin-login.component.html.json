@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/admin-login/admin-login.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1721121484300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1721121531442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,24 @@\n-<p>admin-login works!</p>\n+<div class=\"data-view\">\n+\n+    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" style=\"padding-top: 10%;\" fxLayoutGap=\"10px\">\n+    <form >\n+        <div fxLayout=\"column\" fxLayoutAlign=\"center center\" class=\"data-container mat-elevation-z10\">\n+            <h2>Login</h2>\n+            <mat-form-field fxFlex=\"1 1 auto\" style=\"width: 90%;\">\n+            <mat-icon matPrefix>perm_identity</mat-icon>\n+            <input matInput placeholder=\"User Email\" [(ngModel)]=\"userName\" name=\"user_name\">\n+            </mat-form-field>\n+    \n+            <mat-form-field fxFlex=\"1 1 auto\" style=\"width: 90%;\">\n+                <mat-icon matPrefix>lock_outline</mat-icon>\n+                <input type=\"password\" matInput placeholder=\"Password\" [(ngModel)]=\"password\" name=\"user_password\">\n+                </mat-form-field>\n+    \n+                <button mat-raised-button color=\"primary\" (click)=\"login()\">Login</button>\n+        </div>\n+    \n+    </form>\n+    </div>\n+    \n+    </div>\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1721121536990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+<div class=\"data-view\">\n+\n+    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" style=\"padding-top: 10%;\" fxLayoutGap=\"10px\">\n+    <form >\n+        <div fxLayout=\"column\" fxLayoutAlign=\"center center\" class=\"data-container mat-elevation-z10\">\n+            <h2>Login</h2>\n+            <mat-form-field fxFlex=\"1 1 auto\" style=\"width: 90%;\">\n+            <mat-icon matPrefix>perm_identity</mat-icon>\n+            <input matInput placeholder=\"User Email\" [(ngModel)]=\"userName\" name=\"user_name\">\n+            </mat-form-field>\n+    \n+            <mat-form-field fxFlex=\"1 1 auto\" style=\"width: 90%;\">\n+                <mat-icon matPrefix>lock_outline</mat-icon>\n+                <input type=\"password\" matInput placeholder=\"Password\" [(ngModel)]=\"password\" name=\"user_password\">\n+                </mat-form-field>\n+    \n+                <button mat-raised-button color=\"primary\" (click)=\"login()\">Login</button>\n+        </div>\n+    \n+    </form>\n+    </div>\n+    \n+    </div>\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1721121661475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,29 +20,5 @@\n     </form>\n     </div>\n     \n     </div>\n-    \n-<div class=\"data-view\">\n-\n-    <div fxLayout=\"column\" fxLayoutAlign=\"center center\" style=\"padding-top: 10%;\" fxLayoutGap=\"10px\">\n-    <form >\n-        <div fxLayout=\"column\" fxLayoutAlign=\"center center\" class=\"data-container mat-elevation-z10\">\n-            <h2>Login</h2>\n-            <mat-form-field fxFlex=\"1 1 auto\" style=\"width: 90%;\">\n-            <mat-icon matPrefix>perm_identity</mat-icon>\n-            <input matInput placeholder=\"User Email\" [(ngModel)]=\"userName\" name=\"user_name\">\n-            </mat-form-field>\n-    \n-            <mat-form-field fxFlex=\"1 1 auto\" style=\"width: 90%;\">\n-                <mat-icon matPrefix>lock_outline</mat-icon>\n-                <input type=\"password\" matInput placeholder=\"Password\" [(ngModel)]=\"password\" name=\"user_password\">\n-                </mat-form-field>\n-    \n-                <button mat-raised-button color=\"primary\" (click)=\"login()\">Login</button>\n-        </div>\n-    \n-    </form>\n-    </div>\n-    \n-    </div>\n     \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1721121484300,
+            "name": "Commit-0",
+            "content": "<p>admin-login works!</p>\n"
+        }
+    ]
+}

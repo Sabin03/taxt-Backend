@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/app.component.spec.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1722083401650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722085627163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-/*import { TestBed } from '@angular/core/testing';\n+import { TestBed } from '@angular/core/testing';\n import { RouterTestingModule } from '@angular/router/testing';\n import { AppComponent } from './app.component';\n \n describe('AppComponent', () => {\n@@ -31,36 +31,5 @@\n     fixture.detectChanges();\n     const compiled = fixture.nativeElement as HTMLElement;\n     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, taxt-Backend');\n   });\n-});*/\n-\n-import { TestBed } from '@angular/core/testing';\n-import { RouterTestingModule } from '@angular/router/testing';\n-import { AppComponent } from './app.component';\n-\n-describe('AppComponent', () => {\n-  beforeEach(() => TestBed.configureTestingModule({\n-    imports: [RouterTestingModule],\n-    declarations: [AppComponent]\n-  }));\n-\n-  it('should create the app', () => {\n-    const fixture = TestBed.createComponent(AppComponent);\n-    const app = fixture.componentInstance;\n-    expect(app).toBeTruthy();\n-  });\n-\n-  it(`should have as title 'Taxt-Backend'`, () => {\n-    const fixture = TestBed.createComponent(AppComponent);\n-    const app = fixture.componentInstance;\n-    expect(app.title).toEqual('Taxt-Backend');\n-  });\n-\n-  it('should render title', () => {\n-    const fixture = TestBed.createComponent(AppComponent);\n-    fixture.detectChanges();\n-    const compiled = fixture.nativeElement as HTMLElement;\n-    expect(compiled.querySelector('.content span')?.textContent).toContain('Taxt-Backend app is running!');\n-  });\n });\n-\n"
+                }
+            ],
+            "date": 1722083401650,
+            "name": "Commit-0",
+            "content": "/*import { TestBed } from '@angular/core/testing';\nimport { RouterTestingModule } from '@angular/router/testing';\nimport { AppComponent } from './app.component';\n\ndescribe('AppComponent', () => {\n  beforeEach(async () => {\n    await TestBed.configureTestingModule({\n      imports: [\n        RouterTestingModule\n      ],\n      declarations: [\n        AppComponent\n      ],\n    }).compileComponents();\n  });\n\n  it('should create the app', () => {\n    const fixture = TestBed.createComponent(AppComponent);\n    const app = fixture.componentInstance;\n    expect(app).toBeTruthy();\n  });\n\n  it(`should have as title 'taxt-Backend'`, () => {\n    const fixture = TestBed.createComponent(AppComponent);\n    const app = fixture.componentInstance;\n    expect(app.title).toEqual('taxt-Backend');\n  });\n\n  it('should render title', () => {\n    const fixture = TestBed.createComponent(AppComponent);\n    fixture.detectChanges();\n    const compiled = fixture.nativeElement as HTMLElement;\n    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, taxt-Backend');\n  });\n});*/\n\nimport { TestBed } from '@angular/core/testing';\nimport { RouterTestingModule } from '@angular/router/testing';\nimport { AppComponent } from './app.component';\n\ndescribe('AppComponent', () => {\n  beforeEach(() => TestBed.configureTestingModule({\n    imports: [RouterTestingModule],\n    declarations: [AppComponent]\n  }));\n\n  it('should create the app', () => {\n    const fixture = TestBed.createComponent(AppComponent);\n    const app = fixture.componentInstance;\n    expect(app).toBeTruthy();\n  });\n\n  it(`should have as title 'Taxt-Backend'`, () => {\n    const fixture = TestBed.createComponent(AppComponent);\n    const app = fixture.componentInstance;\n    expect(app.title).toEqual('Taxt-Backend');\n  });\n\n  it('should render title', () => {\n    const fixture = TestBed.createComponent(AppComponent);\n    fixture.detectChanges();\n    const compiled = fixture.nativeElement as HTMLElement;\n    expect(compiled.querySelector('.content span')?.textContent).toContain('Taxt-Backend app is running!');\n  });\n});\n\n"
+        }
+    ]
+}

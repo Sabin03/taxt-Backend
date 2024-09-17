@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/zone-management/service-document-edit/service-document-edit.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722266067926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722266067926,
+            "name": "Commit-0",
+            "content": "<mat-toolbar color=\"primary\" class=\"mat-elevation-z10\">\n    <span>Edit Service Document</span>\n    <span fxFlex=\"1 1 auto\"></span>\n    <button mat-icon-button [mat-dialog-close]=\"true\">\n        <mat-icon>close</mat-icon>\n    </button>\n</mat-toolbar>\n\n<div mat-dialog-content>\n    <div fxLayout=\"column\" fxLayoutAlign=\"start stretch\" fxLayoutGap=\"15px\">\n\n        <h3> Personal Document: </h3>\n        <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n            <mat-checkbox *ngFor=\"let document of personalDocumentArr; let j = index;\" fxFlex=\"1 1 auto\"\n                [checked]=\"document.isSelect\" name=\"{{'document_charge'+ '_' + j}}\" color=\"primary\"\n                (change)=\"serviceDocumentCheckedClick(document , $event)\"\n                >{{ document.name }}</mat-checkbox>\n        </div>\n\n        <h3> Cars Documents:</h3>\n        <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n            <mat-checkbox *ngFor=\"let document of carDocumentArr; let j = index;\" fxFlex=\"1 1 auto\"\n                [checked]=\"document.isSelect\" name=\"{{'car_document_charge'+ '_' + j}}\" color=\"primary\"\n                (change)=\"serviceDocumentCheckedClick(document , $event)\"\n                >{{ document.name }}</mat-checkbox>\n        </div>\n\n    </div>\n</div>\n<div mat-dialog-actions fxLayoutAlign=\"end start\">\n    <button mat-button (click)=\"onNoClick()\">Cancel</button>\n    <button mat-button cdkFocusInitial (click)=\"updateData()\">Update</button>\n</div>"
+        }
+    ]
+}

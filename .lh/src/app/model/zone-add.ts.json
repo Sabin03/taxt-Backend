@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/model/zone-add.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722117702018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722117702018,
+            "name": "Commit-0",
+            "content": "\nimport { Document } from \"./document\";\n\nexport class ZoneAdd {\n\n    constructor(\n        public service_id: number = 0,\n        public service_name: string = '',\n\n        public base_charge: string = '',\n        public per_km_charge: string = '',\n        public per_minute_charge: string = '',\n        public minimum_fair: string = '',\n        public booking_charge: string = '',\n        public cancel_charge: string = '',\n        public minimum_km: string = '2',\n        public tax: string = '0',\n        public document_id: string = '',\n        public car_document_id: string = '',\n\n        public document_array: Array<Document> = [],\n        public car_document_array: Array<Document> = [],\n\n        public isSelect = false,\n        \n\n    ) {\n\n    }\n}\n"
+        }
+    ]
+}

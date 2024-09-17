@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/model/model.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1722328426487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722328467727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,14 @@\n export class Model {\n \n     constructor(\n-        public brand_id: number = 0,\n+        public model_id: number = 0,\n+        public model_name: string = \"\",\n         public brand_name: string = \"\",\n+        public brand_id: string = \"\",\n+        public seat: string = \"1\",\n         public status: number = 0,\n         public created_date: string = \"\",\n         public modify_date: string = \"\",\n-    ){\n+    ) {\n     }\n }\n"
+                }
+            ],
+            "date": 1722328426487,
+            "name": "Commit-0",
+            "content": "export class Model {\n\n    constructor(\n        public brand_id: number = 0,\n        public brand_name: string = \"\",\n        public status: number = 0,\n        public created_date: string = \"\",\n        public modify_date: string = \"\",\n    ){\n    }\n}\n"
+        }
+    ]
+}

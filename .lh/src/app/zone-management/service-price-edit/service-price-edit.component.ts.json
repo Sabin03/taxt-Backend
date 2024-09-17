@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/zone-management/service-price-edit/service-price-edit.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722258383430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722258383430,
+            "name": "Commit-0",
+            "content": "import { Component, Inject } from '@angular/core';\nimport { ZonePrice } from '../../model/zone-price';\nimport { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';\nimport { WebService } from '../../web.service';\nimport { MatSnackBar } from '@angular/material/snack-bar';\nimport { Common } from '../../common';\n\n@Component({\n  selector: 'app-service-price-edit',\n  templateUrl: './service-price-edit.component.html',\n  styleUrl: './service-price-edit.component.css'\n})\nexport class ServicePriceEditComponent {\n\n  editObj: ZonePrice = new ZonePrice();\n  \n\n  constructor(\n    public dialogRef: MatDialogRef<ServicePriceEditComponent>,\n    @Inject(MAT_DIALOG_DATA) public data: any,\n    private webService: WebService,\n    public snackBar: MatSnackBar,\n  ) {\n\n    this.editObj = Object.assign({}, data);\n\n  }\n  onNoClick(): void {\n    this.dialogRef.close();\n  }\n\n  ngOnInit() { }\n\n\n  openSnackBar(message: string) {\n\n    Common.Dlog(message);\n    this.snackBar.open(message, 'Ok', {\n      duration: 5000,\n    });\n  }\n\n  updateData() {\n  \n    if (this.editObj.base_charge == '') {\n      this.openSnackBar(' please enter base charge');\n      return;\n    }\n\n    if (this.editObj.per_km_charge == '') {\n      this.openSnackBar('please enter per KM charge');\n      return;\n    }\n\n    if (this.editObj.per_min_charge == '') {\n      this.openSnackBar('please enter per minute charge');\n      return;\n    }\n\n    if (this.editObj.booking_charge == '') {\n      this.openSnackBar('please enter booking charge');\n      return;\n    }\n\n    if (this.editObj.mini_fair == '') {\n      this.openSnackBar('please enter minimum fair');\n      return;\n    }\n\n    if (this.editObj.mini_km == '') {\n      this.openSnackBar('please enter minimum km');\n      return;\n    }\n\n    if (this.editObj.cancel_charge == '') {\n      this.openSnackBar('please enter cancel charge');\n      return;\n    }\n\n    this.webService.action(Common.svEditServicePrice, { \n      \"price_id\": this.editObj.price_id ,\n      \"zone_id\": this.editObj.zone_id ,\n      \"service_id\": this.editObj.service_id ,\n      \"base_charge\": this.editObj.base_charge ,\n      \"per_km_charge\": this.editObj.per_km_charge ,\n      \"per_min_charge\": this.editObj.per_min_charge ,\n      \"booking_charge\": this.editObj.booking_charge ,\n      \"mini_fair\": this.editObj.mini_fair ,\n      \"mini_km\": this.editObj.mini_km ,\n      \"cancel_charge\" : this.editObj.cancel_charge\n    }, true).then((responseObj: any) => {\n      if (responseObj.status == 1) {\n        this.editObj.price_id = responseObj.payload.price_id;\n        this.openSnackBar(responseObj.message);\n        this.dialogRef.close(this.editObj);\n\n      } else {\n        this.openSnackBar(responseObj.message);\n      }\n    })\n\n}\n}\n"
+        }
+    ]
+}

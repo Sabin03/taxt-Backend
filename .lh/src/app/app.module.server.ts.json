@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/app.module.server.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1721741475189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722417437155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,18 @@\n import { NgModule } from '@angular/core';\n import { ServerModule } from '@angular/platform-server';\n+import { FlexLayoutServerModule } from '@angular/flex-layout/server';\n \n+\n import { AppModule } from './app.module';\n import { AppComponent } from './app.component';\n \n @NgModule({\n   imports: [\n     AppModule,\n     ServerModule,\n+    FlexLayoutServerModule\n+\n   ],\n   bootstrap: [AppComponent],\n })\n export class AppServerModule {}\n"
+                },
+                {
+                    "date": 1722417570137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,14 @@\n import { NgModule } from '@angular/core';\n import { ServerModule } from '@angular/platform-server';\n-import { FlexLayoutServerModule } from '@angular/flex-layout/server';\n \n-\n import { AppModule } from './app.module';\n import { AppComponent } from './app.component';\n \n @NgModule({\n   imports: [\n     AppModule,\n     ServerModule,\n-    FlexLayoutServerModule\n-\n   ],\n   bootstrap: [AppComponent],\n })\n export class AppServerModule {}\n"
+                }
+            ],
+            "date": 1721741475189,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { ServerModule } from '@angular/platform-server';\n\nimport { AppModule } from './app.module';\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  imports: [\n    AppModule,\n    ServerModule,\n  ],\n  bootstrap: [AppComponent],\n})\nexport class AppServerModule {}\n"
+        }
+    ]
+}

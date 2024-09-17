@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/base-design/base-design.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1721472047497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1721472236994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n   templateUrl: './base-design.component.html',\n   styleUrl: './base-design.component.css'\n })\n export class BaseDesignComponent {\n-  panelOpenState = false;\n+  showFiller = false;\n+  //panelOpenState = false;\n }\n"
+                },
+                {
+                    "date": 1721472778331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n   templateUrl: './base-design.component.html',\n   styleUrl: './base-design.component.css'\n })\n export class BaseDesignComponent {\n-  showFiller = false;\n-  //panelOpenState = false;\n+  //showFiller = false;\n+  panelOpenState = false;\n }\n"
+                }
+            ],
+            "date": 1721472047497,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\nimport { NgIf } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatSidenavModule } from '@angular/material/sidenav';\n\n\n@Component({\n  selector: 'app-base-design',\n  templateUrl: './base-design.component.html',\n  styleUrl: './base-design.component.css'\n})\nexport class BaseDesignComponent {\n  panelOpenState = false;\n}\n"
+        }
+    ]
+}
